@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pencil Sketch</title>
+</head>
+<body>
+    <h1>Pencil Sketch Generator</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="Upload">
+    </form>
+    {% if sketch_base64 %}
+        <h2>Pencil Sketch</h2>
+        <img src="data:image/jpeg;base64,{{ sketch_base64 }}">
+    {% endif %}
+</body>
+</html>
